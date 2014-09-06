@@ -190,7 +190,7 @@ module.exports =  (function (){
 
     }
 
-	odoo.prototype._read = function(model,cb,args,method){	
+    odoo.prototype._read = function(model,cb,args,method){	
     	var params = {
 	    	"model": model,
         	"method" : method,
