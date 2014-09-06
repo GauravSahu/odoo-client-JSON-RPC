@@ -9,3 +9,32 @@ An JSON-RPC call is conducted between two parties: the client (the calling proce
 <pre>
 node app.js
 </pre>
+<br>
+<h2>Client JSON</h2>
+localhost:3000/odoo-client
+<br>
+<pre>
+client_req = {
+	"opts" : {
+		"login" : "admin",
+       	"password" : "123",
+       	"db" : "test",
+       	"host": "localhost",
+       	"port": "8069"
+  	},
+  	"moduleDetail" : {
+  		"model" : "hr.employee",
+  		"method" : "create",
+  		"args" : {
+  			"name" : "Gaurav"
+  		},
+  		"filter" : "",
+  		"fields" : "",
+  		"domain" : "",
+  		"offset" : "",
+  		"limit" : "",
+  		"sort" : "",
+  		"resource_id":""
+  	}
+}
+</pre>
