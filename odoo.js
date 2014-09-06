@@ -189,6 +189,24 @@ module.exports =  (function (){
 	this.rpc('/web/dataset/search_read', cb, params);
 
     }
+
+	odoo.prototype._read = function(model,cb,args,method){	
+    	var params = {
+	    	"model": model,
+        	"method" : method,
+	    	"args": args
+		};
+    	this.rpc('/web/dataset/call',cb,params);
+    }
+    odoo.prototype._delete = function(model,cb,method,resource_id){
+    	
+    	var params = {
+	    	"model": model,
+        	"method" : method,
+	    	"resource_id": resource_id
+		};
+    	this.rpc('/web/dataset/call_kw',cb,params);
+    }	
         
     return odoo;
 })();
