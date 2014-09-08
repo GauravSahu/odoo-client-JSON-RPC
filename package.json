@@ -5,7 +5,6 @@
   , "dependencies": {
       "express": "2.5.8",
       "jayson": "*",
-      "underscore": "*",
-      "odoo.js": "*"
+      "underscore": "*"
   }
 }
