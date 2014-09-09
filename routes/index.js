@@ -48,6 +48,15 @@ exports.index = function(req, res){
 		else if(method=='search'){
 			client._search(model,callback,filter,fields,offset,limit,sort);
 		}
+		else if(method=='read'){
+			client._read(model,callback,args,method);
+		}
+		else if(method=='unlink'){
+			client._delete(model,callback,method,args);
+		}
+		else if(method=='write'){
+			client._write(model,callback,method,args,values);
+		}
 	}
 
 }
