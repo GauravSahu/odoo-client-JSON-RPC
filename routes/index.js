@@ -18,6 +18,7 @@ exports.index = function(req, res){
 
 	function callback (err,response){
     	console.log(response.result);
+    		res.json(response.result);
 	}
 
 	function on_auth (err,response,sid){
@@ -61,6 +62,6 @@ exports.index = function(req, res){
 
 }
 
-	res.send(data);
+
 	
 };
