@@ -206,7 +206,16 @@ module.exports =  (function (){
 	    	"resource_id": resource_id
 		};
     	this.rpc('/web/dataset/call_kw',cb,params);
-    }	
+    }
+     odoo.prototype._write = function(model,cb,method,args){
+    	
+    	var params = {
+	    	"model": model,
+        	"method" : method,
+	    	"args":args
+	};
+    	this.rpc('/web/dataset/call_kw',cb,params);
+    }
         
     return odoo;
 })();
