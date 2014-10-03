@@ -17,10 +17,10 @@ localhost:3000/odoo-client
 client_req = {
 	"opts" : {
 		"login" : "admin",
-       	"password" : "123",
-       	"db" : "test",
-       	"host": "localhost",
-       	"port": "8069"
+       		"password" : "123",
+       		"db" : "test",
+       		"host": "localhost",
+       		"port": "8069"
   	},
   	"moduleDetail" : {
   		"model" : "hr.employee",
@@ -38,3 +38,148 @@ client_req = {
   	}
 }
 </pre>
+
+<h3>To Create a New Record  </h3>
+<pre>
+client_req = {
+	"opts" : {
+		"login" : "admin",
+       		"password" : "123",
+       		"db" : "test",
+       		"host": "localhost",
+       		"port": "8069"
+  	},
+  	"moduleDetail" : {
+  		"model" : "hr.employee",
+  		"method" : "create",
+  		"args" : {
+  			"name" : "Gaurav"
+  		},
+  		"filter" : "",
+  		"fields" : "",
+  		"domain" : "",
+  		"offset" : "",
+  		"limit" : "",
+  		"sort" : "",
+  		"resource_id":""
+  	}
+}
+</pre>
+<br/>
+<hr />
+<br/>
+<h3>To Update a Record  </h3>
+<pre>
+client_req = {
+	"opts" : {
+		"login" : "admin",
+       		"password" : "123",
+       		"db" : "test",
+       		"host": "localhost",
+       		"port": "8069"
+  	},
+  	"moduleDetail" : {
+  		"model" : "hr.employee",
+  		"method" : "write",
+  		"args" : [1,{          // Here 1 is id of record
+  			"name" : "Gaurav"
+  		}],
+  		"filter" : "",
+  		"fields" : "",
+  		"domain" : "",
+  		"offset" : "",
+  		"limit" : "",
+  		"sort" : "",
+  		"resource_id":""
+  	}
+}
+</pre>
+<br/>
+<hr />
+<br/>
+<h3>To Delete a Record</h3>
+<pre>
+client_req = {
+	"opts" : {
+		"login" : "admin",
+       		"password" : "123",
+       		"db" : "test",
+       		"host": "localhost",
+       		"port": "8069"
+  	},
+  	"moduleDetail" : {
+  		"model" : "hr.employee",
+  		"method" : "unlink",
+  		"args" : [1],  // id of record
+  		"filter" : "",
+  		"fields" : "",
+  		"domain" : "",
+  		"offset" : "",
+  		"limit" : "",
+  		"sort" : "",
+  		"resource_id":""
+  	}
+}
+</pre>
+
+<br/>
+<hr />
+<br/>
+<h3>To Read a Specific Record</h3>
+<pre>
+client_req = {
+	"opts" : {
+		"login" : "admin",
+       		"password" : "123",
+       		"db" : "test",
+       		"host": "localhost",
+       		"port": "8069"
+  	},
+  	"moduleDetail" : {
+  		"model" : "hr.employee",
+  		"method" : "read",
+  		"args" : [1],  // id of record
+  		"filter" : "",
+  		"fields" : "",
+  		"domain" : "",
+  		"offset" : "",
+  		"limit" : "",
+  		"sort" : "",
+  		"resource_id":""
+  	}
+}
+</pre>
+
+<br/>
+<hr />
+<br/>
+<h3>To Search a Record</h3>
+<pre>
+client_req = {
+	"opts" : {
+		"login" : "admin",
+       		"password" : "123",
+       		"db" : "test",
+       		"host": "localhost",
+       		"port": "8069"
+  	},
+  	"moduleDetail" : {
+  		"model" : "hr.employee",
+  		"method" : "search",
+  		"args" : [1,20],  // range of id 
+  		"filter" : "",
+  		"fields" : "",
+  		"domain" : "",
+  		"offset" : "",
+  		"limit" : "",
+  		"sort" : "",
+  		"resource_id":""
+  	}
+}
+</pre>
+
+
+
+
+
+
