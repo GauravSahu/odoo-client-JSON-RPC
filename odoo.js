@@ -201,6 +201,7 @@ module.exports =  (function (){
     odoo.prototype._delete = function(model,cb,method,args){
     	
     	var params = {
+    		"kwargs" : {},
 	    	"model": model,
         	"method" : method,
 	    	"args": args
@@ -210,6 +211,7 @@ module.exports =  (function (){
      odoo.prototype._write = function(model,cb,method,args){
     	
     	var params = {
+    		"kwargs" : {},
 	    	"model": model,
         	"method" : method,
 	    	"args":args
