@@ -1,36 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
   <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Odoo-client-json-rpc : An JSON-RPC call is conducted between two parties: the client (the calling process) and the server (the called process). A server is made available at a particular URL (such as">
+    <title>Odoo-client-json-rpc by GauravSahu</title>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Odoo-client-json-rpc</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
-
   <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Odoo-client-json-rpc</h1>
+        <p class="header">An JSON-RPC call is conducted between two parties: the client (the calling process) and the server (the called process). </p>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/GauravSahu/odoo-client-JSON-RPC">View on GitHub</a>
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/GauravSahu/odoo-client-JSON-RPC/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/GauravSahu/odoo-client-JSON-RPC/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/GauravSahu/odoo-client-JSON-RPC">View On GitHub</a></li>
+        </ul>
 
-          <h1 id="project_title">Odoo-client-json-rpc</h1>
-          <h2 id="project_tagline">An JSON-RPC call is conducted between two parties: the client (the calling process) and the server (the called process). A server is made available at a particular URL (such as</h2>
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/GauravSahu">GauravSahu</a></p>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/GauravSahu/odoo-client-JSON-RPC/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/GauravSahu/odoo-client-JSON-RPC/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
+      </header>
+      <section>
         <h3>
 <a name="odoo-client-jsonrpc" class="anchor" href="#odoo-client-jsonrpc"><span class="octicon octicon-link"></span></a>odoo client jsonRPC</h3>
 
@@ -51,8 +50,7 @@ An JSON-RPC call is conducted between two parties: the client (the calling proce
 <h3>
 <a name="to-create-a-new-record" class="anchor" href="#to-create-a-new-record"><span class="octicon octicon-link"></span></a>To Create a New Record</h3>
 
-<p>`
-client_req = {
+<pre><code>client_req = {
     "opts" : {
         "login" : "admin",
             "password" : "123",
@@ -74,36 +72,130 @@ client_req = {
         "sort" : "",
         "resource_id":""
     }
-}</p>
-
-<p>`</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+}
+</code></pre>
 
 <h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+<a name="to-update-a-record" class="anchor" href="#to-update-a-record"><span class="octicon octicon-link"></span></a>To Update a Record</h3>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<pre><code>client_req = {
+    "opts" : {
+        "login" : "admin",
+            "password" : "123",
+            "db" : "test",
+            "host": "localhost",
+            "port": "8069"
+    },
+    "moduleDetail" : {
+        "model" : "hr.employee",
+        "method" : "write",
+        "args" : [1,{          // Here 1 is id of record
+            "name" : "Gaurav"
+        }],
+        "filter" : "",
+        "fields" : "",
+        "domain" : "",
+        "offset" : "",
+        "limit" : "",
+        "sort" : "",
+        "resource_id":""
+    }
+}
+</code></pre>
 
 <h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+<a name="to-delete-a-record" class="anchor" href="#to-delete-a-record"><span class="octicon octicon-link"></span></a>To Delete a Record</h3>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<pre><code>client_req = {
+    "opts" : {
+        "login" : "admin",
+            "password" : "123",
+            "db" : "test",
+            "host": "localhost",
+            "port": "8069"
+    },
+    "moduleDetail" : {
+        "model" : "hr.employee",
+        "method" : "unlink",
+        "args" : [1],  // id of record
+        "filter" : "",
+        "fields" : "",
+        "domain" : "",
+        "offset" : "",
+        "limit" : "",
+        "sort" : "",
+        "resource_id":""
+    }
+}
+
+</code></pre>
+
+<h3>
+<a name="to-read-a-specific-record" class="anchor" href="#to-read-a-specific-record"><span class="octicon octicon-link"></span></a>To Read a Specific Record</h3>
+
+<pre><code>client_req = {
+    "opts" : {
+        "login" : "admin",
+            "password" : "123",
+            "db" : "test",
+            "host": "localhost",
+            "port": "8069"
+    },
+    "moduleDetail" : {
+        "model" : "hr.employee",
+        "method" : "read",
+        "args" : [1],  // id of record
+        "filter" : "",
+        "fields" : "",
+        "domain" : "",
+        "offset" : "",
+        "limit" : "",
+        "sort" : "",
+        "resource_id":""
+    }
+}
+
+
+</code></pre>
+
+<h3>
+<a name="to-search-a-record" class="anchor" href="#to-search-a-record"><span class="octicon octicon-link"></span></a>To Search a Record</h3>
+
+<pre><code>client_req = {
+    "opts" : {
+        "login" : "admin",
+            "password" : "123",
+            "db" : "test",
+            "host": "localhost",
+            "port": "8069"
+    },
+    "moduleDetail" : {
+        "model" : "hr.employee",
+        "method" : "read",
+        "args" : [1],  // id of record
+        "filter" : "",
+        "fields" : "",
+        "domain" : "",
+        "offset" : "",
+        "limit" : "",
+        "sort" : "",
+        "resource_id":""
+    }
+}
+
+
+</code></pre>
+
+<h3>
+<a name="author" class="anchor" href="#author"><span class="octicon octicon-link"></span></a>Author</h3>
+
+<p>Gaurav Sahu</p>
       </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Odoo-client-json-rpc maintained by <a href="https://github.com/GauravSahu">GauravSahu</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      <footer>
+        <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
       </footer>
     </div>
-
-    
-
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
   </body>
 </html>
