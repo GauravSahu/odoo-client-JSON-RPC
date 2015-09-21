@@ -10,7 +10,7 @@ exports.index = function(req, res){
 	console.dir(data.opts.login);
 	
 	var client = new odoo(data.opts);
-	// auth
+
 	client.auth(on_auth);
 
 // show databases
@@ -30,10 +30,10 @@ exports.index = function(req, res){
 		client.context = response.result.user_context;
 		client.sid = sid;
 
-		// Get model struct
+	
 		//client.get_model('hr.employee',callback);
 
-		// Parse Data 
+	
 		var args = [data.moduleDetail.args];
 		var model = data.moduleDetail.model;
 		var method  = data.moduleDetail.method;
