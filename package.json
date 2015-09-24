@@ -1,5 +1,5 @@
 {
-    "name": "Odoo Connector",
+   "name": "application-name",
     "version": "0.0.1",
     "private": true,
     "dependencies": {
