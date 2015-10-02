@@ -56,7 +56,7 @@ exports.index = function(req, res){
 			client._delete(model,callback,method,args);
 		}
 		else if(method=='write'){
-			client._write(model,callback,method,args,values);
+			client._write(model,callback,method,args);
 		}
 	}
 
