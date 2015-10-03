@@ -12,12 +12,13 @@ exports.index = function(req, res){
 	var client = new odoo(data.opts);
 
 	client.auth(on_auth);
+	client.auth();
 
 // show databases
 //client.database_getlist(callback);
 
 	function callback (err,response){
-    	console.log(response.result);
+    		console.log(response.result);
     		res.json(response.result);
 	}
 
