@@ -169,7 +169,7 @@ client_req = {
   		"model" : "hr.employee",
   		"method" : "search",
   		"args" : [1,20],  // range of id 
-  		"filter" : "",
+  		"filter" : "",//[["name","=","Gaurav"]]
   		"fields" : "",
   		"domain" : "",
   		"offset" : "",
