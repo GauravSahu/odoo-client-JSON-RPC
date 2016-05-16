@@ -179,7 +179,7 @@ module.exports =  (function (){
 	
 	var params = {
 	    "model": model,
-	    "domain": domain,
+	    "domain": domain[0],
 	    "sort": sort,
 	    "fields": fields,
 	    "limit": limit || 80,
@@ -222,7 +222,7 @@ module.exports =  (function (){
     		"kwargs" : {},
 	    	"model": model,
         	"method" : method,
-	    	"args":args
+	    	"args":args[0]
 	};
     	this.rpc('/web/dataset/call_kw',cb,params);
     }
